@@ -13,8 +13,9 @@
                             <li>{{ $error }}</li>
                         @endforeach
                     @endif
-                    <form action="{{ route('projects.update') }}" method="POST" style="color: black">
-                        @csrf    
+                    <form action="{{ route('projects.update', $project->id) }}" method="POST" style="color: black">
+                        @csrf 
+                        @method('PUT')   
                         <div class="form-group">
                             <strong>Project Titel:</strong>
                             <input type="text" name="naam" class="form-control" required>

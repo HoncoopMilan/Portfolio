@@ -26,10 +26,11 @@
                         <div class="mt-16">
                                 @foreach ($projects as $project)
                                 <div class="grid grid-cols-1 md:grid-cols-4 gap-6 lg:gap-8">
+                                    {{-- <img src="{{$project->image}}" alt=""> --}}
                                     <h1>{{$project->naam}}</h1>
                                     <p>{{$project->content}}</p>
                                     <form action="{{ route('projects.destroy',$project->id) }}" method="Post">
-                                        <a class="btn btn-primary" href="{{ route('projects.edit', $project->id)}}">{{ __('Aanpassen')}}</a>
+                                        {{-- <a class="btn btn-primary" href="{{ route('projects.edit', $project->id)}}">{{ __('Aanpassen')}}</a> --}}
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-outline-danger">{{ __('Verwijderen')}}</button>
