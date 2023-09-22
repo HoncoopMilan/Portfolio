@@ -30,6 +30,9 @@ Zie code voor voorbeeld
 
 ## variabele namen
 Gebruik nuttige en beschrijvende namen voor je variablele
+```
+$project->naam
+```
 Gebruik camelCase
 
 ## Github
